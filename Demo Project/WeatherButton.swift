@@ -12,9 +12,6 @@ struct MyButton: View {
     var backgroundColor: Color
     
     var body: some View {
-        Button{
-        
-        } label: {
             Text(buttonText)
                 .frame(width: 300,height: 50)
                 .background(backgroundColor)
@@ -22,7 +19,5 @@ struct MyButton: View {
                 .font(.system(size: 20,weight: .bold,design: .default))
                 .cornerRadius(10)
             
-            
-        }
     }
 }

@@ -15,7 +15,7 @@ struct ContentView: View {
             
              VStack{
                 CityTextView(cityName: "Cupartino, CA")
-                MainWeatherStatusView(imageName: "cloud.sun.fill",temperature: 70)
+                 MainWeatherStatusView(imageName: isNight ? "moon.stars.fill" : "cloud.sun.fill",temperature: 70)
                 
                 HStack(spacing: 16){
                     WeatherDayView(dayOfWeek: "TUE",imageName: "cloud.sun.fill",temperature: 65)
@@ -27,7 +27,7 @@ struct ContentView: View {
                 }
                 Spacer()
                  Button{
-                     isNight = true
+                     isNight.toggle()
                      print("tapped")
                  } label: {
                      MyButton(buttonText: "Change Day Time",textColor: .blue,backgroundColor: .white)
